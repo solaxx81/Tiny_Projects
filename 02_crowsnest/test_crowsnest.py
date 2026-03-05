@@ -34,14 +34,14 @@ template = "Ahoy, Captain, {} {} off the larboard bow!"
 
 # --------------------------------------------------
 def test_exists():
-    """exists"""
+    """Exists"""
 
     assert os.path.isfile(prg)
 
 
 # --------------------------------------------------
 def test_usage():
-    """usage"""
+    """Usage"""
 
     for flag in ["-h", "--help"]:
         rv, out = getstatusoutput(f"{prg} {flag}")
@@ -51,7 +51,7 @@ def test_usage():
 
 # --------------------------------------------------
 def test_consonant():
-    """brigantine -> a brigantine"""
+    """Brigantine -> a brigantine"""
 
     for word in consonant_words:
         out = getoutput(f"{prg} {word}")
@@ -60,7 +60,7 @@ def test_consonant():
 
 # --------------------------------------------------
 def test_consonant_upper():
-    """brigantine -> a Brigatine"""
+    """Brigantine -> a Brigantine"""
 
     for word in consonant_words:
         out = getoutput(f"{prg} {word.title()}")
@@ -69,7 +69,7 @@ def test_consonant_upper():
 
 # --------------------------------------------------
 def test_vowel():
-    """octopus -> an octopus"""
+    """Octopus -> an octopus"""
 
     for word in vowel_words:
         out = getoutput(f"{prg} {word}")
@@ -78,7 +78,7 @@ def test_vowel():
 
 # --------------------------------------------------
 def test_vowel_upper():
-    """octopus -> an Octopus"""
+    """Octopus -> an Octopus"""
 
     for word in vowel_words:
         out = getoutput(f"{prg} {word.upper()}")

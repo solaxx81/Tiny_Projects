@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""tests for hello.py"""
+"""tests for hello.py."""
 
 import os
 from subprocess import getoutput, getstatusoutput
@@ -10,31 +10,27 @@ run_cmd = f"python3 {prg}"
 
 # --------------------------------------------------
 def test_exists():
-    """exists"""
-
+    """Exists."""
     assert os.path.isfile(prg)
 
 
 # --------------------------------------------------
 def test_runnable():
-    """Runs using python3"""
-
+    """Runs using python3."""
     out = getoutput(run_cmd)
     assert out.strip() == "Hello, World!"
 
 
 # --------------------------------------------------
 def test_executable():
-    """Says 'Hello, World!' by default"""
-
+    """Says 'Hello, World!' by default."""
     out = getoutput(run_cmd)
     assert out.strip() == "Hello, World!"
 
 
 # --------------------------------------------------
 def test_usage():
-    """usage"""
-
+    """Usage"""
     for flag in ["-h", "--help"]:
         rv, out = getstatusoutput(f"{run_cmd} {flag}")
         assert rv == 0
@@ -43,8 +39,7 @@ def test_usage():
 
 # --------------------------------------------------
 def test_input():
-    """test for input"""
-
+    """Test for input"""
     for val in ["Universe", "Multiverse"]:
         for option in ["-n", "--name"]:
             rv, out = getstatusoutput(f"{run_cmd} {option} {val}")

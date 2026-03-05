@@ -1,27 +1,32 @@
 #!/usr/bin/env python3
+
 """
-Auteur: Jean-Yves
-But: Dire bonjour (Projet 01 du livre)
+Author:  Ken Youens-Clark <kyclark@gmail.com>
+Purpose: Say hello
 """
 
 import argparse
 
 
 def get_args():
-    """Récupérer les arguments de la ligne de commande"""
-    parser = argparse.ArgumentParser(description="Dire bonjour")
+    """Get the command-line arguments"""
 
-    # On définit l'option -n (ou --name)
-    parser.add_argument("-n", "--name", metavar="nom", default="World", help="Le nom à saluer")
-
+    parser = argparse.ArgumentParser(description="Say hello")
+    parser.add_argument(
+        "-n",
+        "--name",
+        metavar="name",
+        default="World",
+        help="Name to greet",
+    )
     return parser.parse_args()
 
 
 def main():
-    """Le cœur du programme"""
+    """Exécution principale : là où la magie opère"""
+
     args = get_args()
-    # On affiche exactement ce que le test attend : Hello, suivi du nom !
-    print(f"Hello, {args.name}!")
+    print("Hello, " + args.name + "!")
 
 
 if __name__ == "__main__":

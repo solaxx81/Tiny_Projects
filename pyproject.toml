@@ -2,12 +2,7 @@
 line-length = 120
 target-version = "py314"
 
-select = [
-  "E",   # pycodestyle errors
-  "F",   # pyflakes
-  "W",   # warnings
-]
-
+# Dossiers à ignorer lors de l'analyse
 exclude = [
   ".venv",
   "venv",
@@ -15,3 +10,27 @@ exclude = [
   "build",
   "dist",
 ]
+
+[tool.ruff.lint]
+# On regroupe ici tout ce qui concerne la validation du code
+select = [
+  "E",   # pycodestyle errors
+  "F",   # pyflakes
+  "W",   # warnings
+  "D",   # pydocstyle (docstrings)
+  "I",   # isort (tri des imports)
+]
+
+ignore = [
+  "D100", # Missing docstring in public module
+  "D415", # Ponctuation finale (. ! ?)
+  "D400", # Point final obligatoire
+  "D401", # Mood impératif ("Dit bonjour" au lieu de "Dira bonjour")
+  "D205", # Ligne vide obligatoire après le résumé
+  "D212", # Résumé sur la première ligne
+  "D202", # Pas de ligne vide après la docstring
+]
+
+[tool.ruff.lint.pydocstyle]
+# Pour être sûr que Ruff n'utilise pas un style trop exotique
+convention = "google"

@@ -23,7 +23,7 @@ def get_args():
 
 
 def main():
-    """Exécution principale : là où la magie opère"""
+    """Exécution principale : c'est ici que cela se passe."""
 
     args = get_args()
     print("Hello, " + args.name + "!")

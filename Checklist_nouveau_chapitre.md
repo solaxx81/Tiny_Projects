@@ -3,12 +3,14 @@
 
 #### En prenant par exemple le chapitre 2 : crowsnest
 
-- Créer le dossier 02_crowsnest dans le répertoire 'Tiny_Projects'
-- Copier dans ce répertoire depuis le dossier des fichiers du livre les fichiers suivants :
+- **Créer le dossier** 02_crowsnest dans le répertoire 'Tiny_Projects'
+
+- **Copier dans ce répertoire** depuis le dossier des fichiers du livre les fichiers suivants :
     - Makefile
     - test.py
     - README.md
-- Se placer dans le dossier créé et depuis le terminal **entrer la commande** qui créera un template de fichier prêt à être utilisé par les tests. :
+
+- **Se placer dans le dossier** créé et depuis le terminal **entrer la commande** qui créera un template de fichier prêt à être utilisé par les tests. :
     ```Python
     new crowsnest.py
     ```

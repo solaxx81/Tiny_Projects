@@ -24,12 +24,13 @@ select = [
 
 ignore = [
   "D100", # Missing docstring in public module
-  "D415", # Ponctuation finale (. ! ?)
-  "D400", # Point final obligatoire
-  "D401", # Mood impératif ("Dit bonjour" au lieu de "Dira bonjour")
+  "D202", # Pas de ligne vide après la docstring
   "D205", # Ligne vide obligatoire après le résumé
   "D212", # Résumé sur la première ligne
-  "D202", # Pas de ligne vide après la docstring
+  "D400", # Point final obligatoire
+  "D401", # Mood impératif ("Dit bonjour" au lieu de "Dira bonjour")
+  "D403", # Premier mot de la docstring doit être une majuscule
+  "D415", # Ponctuation finale (. ! ?)
 ]
 
 [tool.ruff.lint.pydocstyle]

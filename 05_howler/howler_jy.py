@@ -7,7 +7,6 @@ Purpose: Write a program that uppercase's the given text
 
 import argparse
 import os
-import sys
 
 
 # --------------------------------------------------
@@ -36,11 +35,12 @@ def main():
 
     args = get_args()
 
-    out_fh = open(args.outfile, "wt") if args.outfile else sys.stdout
-    out_fh.write(args.text.upper() + "\n")
+    if args.outfile:
+        out_fh = open(args.outfile, "wt")
+        out_fh.write(args.text.upper())
+    else:
+        print(args.text.upper())
 
-    if out_fh is not sys.stdout:
-        out_fh.close()
 
 # --------------------------------------------------
 if __name__ == "__main__":

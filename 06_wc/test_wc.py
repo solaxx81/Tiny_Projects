@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""tests for wc.py"""
+"""tests for wc.py
+A finaliser
+"""
 
 import os
 import random

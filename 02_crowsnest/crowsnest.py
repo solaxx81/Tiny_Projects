@@ -2,7 +2,7 @@
 """
 Author : JYM <jymo81.dude451@slmail.me>
 Date   : 2026-03-05
-Purpose: Crow's Nest 
+Purpose: Crow's Nest
 """
 
 import argparse

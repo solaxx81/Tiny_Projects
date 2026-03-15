@@ -1,26 +1,10 @@
-# --- PYTHON ---
-# Ignore l'environnement virtuel (le plus important !)
-venv/
-ENV/
-env/
-.venv/
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
 
-# Fichiers compilés (accélèrent Python mais inutiles à sauver)
-**/__pycache__/
-*.py[cod]
-*$py.class
-
-# --- OUTILS DE TEST & QUALITÉ ---
-# Dossiers générés par Pytest et Ruff
-.pytest_cache/
-.ruff_cache/
-.mypy_cache/
-.coverage
-
-# --- ÉDITEUR (OSS-CODE) ---
-# Ignore les réglages locaux du dossier (souvent spécifiques à ton écran/chemins)
-.vscode/
-
-# --- SYSTÈME ---
-.DS_Store
-*.log
+# Virtual environments
+.venv

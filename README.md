@@ -1,1 +1,3 @@
-Mes exercices pour le livre Tiny Python Projects.
+Exercices du livre de Ken Youens-Clark
+
+- Tiny Python Projects

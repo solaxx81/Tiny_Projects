@@ -1,38 +1,37 @@
+[project]
+name = "boring-stuff"
+version = "0.1.0"
+description = "Exercices livre Tiny Python Projects"
+readme = "README.md"
+authors = [{name = "JYM"}]
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=9.0.2",
+    "requests",
+]
+
+[tool.uv]
+managed = true
+
+[tool.pytest.ini_options]
+addopts = "--ignore=livre_tiny_python_projects"
+testpaths = ["."]
+
+[tool.pyright]
+include = ["."]
+exclude = [".venv", "**/__pycache__"]
+venvPath = "."
+venv = ".venv"
+pythonVersion = "3.14"
+typeCheckingMode = "basic"
+
 [tool.ruff]
 line-length = 120
 target-version = "py314"
 
-# Dossiers à ignorer lors de l'analyse
-exclude = [
-  ".venv",
-  "venv",
-  "__pycache__",
-  "build",
-  "dist",
-]
-
 [tool.ruff.lint]
-# On regroupe ici tout ce qui concerne la validation du code
-select = [
-  "A",   # vérifications de "Shadowing"
-  "E",   # pycodestyle errors
-  "F",   # pyflakes
-  "W",   # warnings
-  "D",   # pydocstyle (docstrings)
-  "I",   # isort (tri des imports)
-]
-
-ignore = [
-  "D100", # Missing docstring in public module
-  "D202", # Pas de ligne vide après la docstring
-  "D205", # Ligne vide obligatoire après le résumé
-  "D212", # Résumé sur la première ligne
-  "D400", # Point final obligatoire
-  "D401", # Mood impératif ("Dit bonjour" au lieu de "Dira bonjour")
-  "D403", # Premier mot de la docstring doit être une majuscule
-  "D415", # Ponctuation finale (. ! ?)
-]
+select = ["A", "E", "F", "W", "D", "I", "UP", "B"]
+ignore = ["D100", "D202", "D205", "D212", "D400", "D401", "D403", "D415"]
 
 [tool.ruff.lint.pydocstyle]
-# Pour être sûr que Ruff n'utilise pas un style trop exotique
 convention = "google"
